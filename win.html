@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>win</title>
+    <style>
+      body {
+        background: linear-gradient(to right, green 60%, red);
+      }
+      #playagian {
+        height: 15rem;
+        width: 30rem;
+        max-width: 100%;
+        font-size: 6em;
+        color: white;
+        display: inline-block;
+        border: none;
+        border-radius: 9999px;
+        background-color: blue;
+        animation-name: ranbow;
+        animation-iteration-count: infinite;
+        animation-duration: 0.6s;
+      }
+      @keyframes ranbow {
+        0% {
+          background: linear-gradient(
+            to right,
+            blue,
+            green,
+            purple,
+            red,
+            yellow
+          );
+        }
+        20% {
+          background: linear-gradient(
+            to right,
+            yellow,
+            blue,
+            green,
+            purple,
+            red
+          );
+        }
+        40% {
+          background: linear-gradient(
+            to right,
+            red,
+            yellow,
+            blue,
+            green,
+            purple
+          );
+        }
+        60% {
+          background: linear-gradient(
+            to right,
+            purple,
+            red,
+            yellow,
+            blue,
+            green
+          );
+        }
+        80% {
+          background: linear-gradient(
+            to right,
+            green,
+            purple,
+            red,
+            yellow,
+            blue
+          );
+        }
+        100% {
+          background: linear-gradient(
+            to right,
+            blue,
+            green,
+            purple,
+            red,
+            yellow
+          );
+        }
+      }
+      p {
+        color: white;
+        font-size: 6rem;
+        margin-left: 2em;
+        display: inline-block;
+      }
+      @media only screen and (max-width: 800px) {
+        p {
+          margin: 0 0 0 0;
+          width: 3rem;
+        }
+        #playagian{
+          height:5rem;
+          font-size: 3rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <input type="button" onclick="play()" value="play again" id="playagian" />
+    <p>you won!!</p>
+    <script>
+      var playagian = document.getElementById("playagian");
+      function play() {
+        window.location.replace("./index.html");
+      }
+    </script>
+  </body>
+</html>
